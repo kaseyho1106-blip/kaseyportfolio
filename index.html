@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kasey Ho — Mechanical Engineering Student</title>
+<meta name="description" content="Portfolio of Kasey Ho, second-year mechanical engineering student at the University of Toronto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f4f1;--surface:#fff;--ink:#14202b;--mute:#56656f;--line:#c9d0cf;--accent:#0b7a75;--accent-ink:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10181f;--surface:#17222b;--ink:#eaf0ee;--mute:#9fb0b6;--line:#2c3b46;--accent:#4fc7bf;--accent-ink:#06201e;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10181f;--surface:#17222b;--ink:#eaf0ee;--mute:#9fb0b6;--line:#2c3b46;--accent:#4fc7bf;--accent-ink:#06201e;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Instrument Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Instrument Sans",system-ui,sans-serif;margin:0;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;border-bottom:1px solid var(--line);font-size:15px}
+nav .links{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none}
+nav a:hover{text-decoration:underline}
+.btn{display:inline-block;padding:8px 16px;border:1px solid var(--ink);border-radius:4px;text-decoration:none;font-weight:500}
+.btn:hover{background:var(--ink);color:var(--bg)!important;text-decoration:none!important}
+.btn.fill{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn.fill:hover{background:var(--ink);border-color:var(--ink)}
+header.hero{padding:88px 0 64px}
+.hero p.role{color:var(--mute);margin:0 0 16px}
+.hero h1{font-size:clamp(56px,13vw,132px);font-weight:700}
+.dim{display:flex;align-items:center;color:var(--accent);margin:14px 0 22px;max-width:620px}
+.dim i{flex:1;height:1px;background:currentColor}
+.dim b{width:1px;height:16px;background:currentColor}
+.dim span{padding:0 12px;font-size:14px;color:var(--mute);white-space:nowrap}
+.hero .tag{font-size:clamp(22px,3.4vw,30px);max-width:24ch;line-height:1.3;margin:0 0 28px;font-family:"Bricolage Grotesque",sans-serif;font-weight:500}
+.contact{display:flex;flex-wrap:wrap;gap:8px 28px;color:var(--mute);font-size:15px}
+.contact a{color:var(--ink)}
+.stats{display:flex;flex-wrap:wrap;gap:12px 48px;margin-top:44px;padding-top:20px;border-top:1px solid var(--line)}
+.stats div{font-size:15px;color:var(--mute)}
+.stats strong{display:block;font:700 22px "Bricolage Grotesque",sans-serif;color:var(--ink)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+section>h2{font-size:clamp(28px,4vw,40px);margin-bottom:8px}
+section>h2 em{font-style:normal;color:var(--accent);margin-right:10px;font-weight:500}
+.sub{color:var(--mute);margin:0 0 36px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
+.about p{margin:0 0 16px;max-width:60ch}
+.about dl{margin:0;border-left:3px solid var(--accent);padding-left:20px}
+.about dt{font-weight:500}
+.about dd{margin:2px 0 18px;color:var(--mute)}
+.proj{background:var(--surface);border:1px solid var(--ink);margin-bottom:28px}
+.proj header{padding:24px 24px 18px}
+.proj .meta{color:var(--mute);font-size:15px;margin:0 0 6px}
+.proj h3{font-size:28px;margin-bottom:10px}
+.proj header p{margin:0;max-width:62ch}
+.tb{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);margin:0}
+.tb div{padding:12px 16px;border-right:1px solid var(--line)}
+.tb div:last-child{border-right:0}
+.tb dt{font-size:13px;color:var(--mute)}
+.tb dd{margin:2px 0 0;font-size:15px;font-weight:500}
+.proj .more{display:block;padding:12px 24px;border-top:1px solid var(--ink);text-decoration:none;font-weight:500;color:var(--accent)}
+.proj .more:hover{background:var(--accent);color:var(--accent-ink)}
+.job{display:grid;grid-template-columns:220px 1fr;gap:12px 32px;padding:22px 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0}
+.job h3{font-size:21px}
+.job .org{color:var(--mute);font-size:15px;margin-top:4px}
+.job p{margin:0;max-width:64ch}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 40px}
+.skills h3{font-size:19px;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.chips li{padding:4px 12px;border:1px solid var(--line);border-radius:999px;font-size:15px;background:var(--surface)}
+.cta{background:var(--ink);color:var(--bg);border-top:0;padding:72px 0}
+.cta h2{font-size:clamp(32px,6vw,56px);max-width:16ch;margin-bottom:28px}
+.cta .row{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.cta a{color:var(--bg)}
+.cta .btn{border-color:var(--bg)}
+.cta .btn:hover{background:var(--bg);color:var(--ink)!important}
+footer{padding:24px 0;color:var(--mute);font-size:14px}
+@media (max-width:720px){
+.about,.skills{grid-template-columns:1fr}
+.job{grid-template-columns:1fr}
+.tb{grid-template-columns:1fr 1fr}
+.tb div:nth-child(2){border-right:0}
+.tb div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.dim span{white-space:normal}
+header.hero{padding:56px 0 48px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav aria-label="Main">
+<strong>Kasey Ho</strong>
+<div class="links"><a href="#about">About</a><a href="#work">Work</a><a href="#contact">Contact</a><a class="btn" href="https://kaseyho.lovable.app/__l5e/assets-v1/d67c0b6d-9b3a-4520-8f79-bcd9b7c2f053/Kasey_Ho_Resume.pdf">Résumé</a></div>
+</nav>
+
+<header class="hero">
+<p class="role">Mechanical engineering student</p>
+<h1>Kasey Ho</h1>
+<div class="dim" aria-hidden="true"><b></b><i></i><span>design + healthcare</span><i></i><b></b></div>
+<p class="tag">Engineering at the intersection of design and healthcare.</p>
+<div class="contact">
+<span>Email <a href="mailto:kaseyho1106@gmail.com">kaseyho1106@gmail.com</a></span>
+<span>Phone <a href="tel:2368835688">236-883-5688</a></span>
+<span><a href="https://www.linkedin.com/in/kaseyho11">linkedin.com/in/kaseyho11</a></span>
+</div>
+<div class="stats">
+<div><strong>U of T</strong>BASc Mechanical Engineering</div>
+<div><strong>2nd year</strong>Dean’s Merit Scholarship</div>
+<div><strong>4 projects</strong>CAD, machining, software, infrastructure</div>
+</div>
+</header>
+
+<section id="about">
+<h2><em>(a)</em>About</h2>
+<p class="sub">&nbsp;</p>
+<div class="about">
+<div>
+<p>I’m a second-year engineering student at the University of Toronto and a Dean’s Merit Scholarship recipient, driven by a strong interest in the intersection of engineering and healthcare.</p>
+<p>My goal is to specialize in biomedical engineering and apply technical knowledge to improve patient outcomes and advance medical technologies.</p>
+</div>
+<dl>
+<dt>Mission</dt><dd>Specialize in biomedical engineering and build technology that improves patient outcomes.</dd>
+<dt>Why</dt><dd>The best engineering ends at a patient’s bedside. That’s the outcome I design toward.</dd>
+</dl>
+</div>
+</section>
+
+<section id="work">
+<h2><em>(b)</em>Selected work</h2>
+<p class="sub">Four projects that show how I approach engineering problems.</p>
+
+<article class="proj">
+<header>
+<p class="meta">Automotive · Blue Sky Solar Racing</p>
+<h3>Upper Control Arm Design</h3>
+<p>A double-wishbone suspension component designed in CATIA and validated in ANSYS before manufacturing.</p>
+</header>
+<dl class="tb">
+<div><dt>Goal</dt><dd>Structural performance in tight packaging</dd></div>
+<div><dt>Role</dt><dd>Mechanical design</dd></div>
+<div><dt>Obstacle</dt><dd>Manufacturability constraints</dd></div>
+<div><dt>Result</dt><dd>CNC-ready, validated design</dd></div>
+</dl>
+<a class="more" href="https://kaseyho.lovable.app/__l5e/assets-v1/f52515f8-81ae-4abb-aa9e-f213001a3c80/Upper_Control_Arm_Documentation.pdf">Read the documentation</a>
+</article>
+
+<article class="proj">
+<header>
+<p class="meta">Manufacturing · George Brown College Machining Course</p>
+<h3>Pneumatic Engine Piston</h3>
+<p>A precision piston for a pneumatic engine, machined from raw stock on a manual lathe, milling machine, and drill press.</p>
+</header>
+<dl class="tb">
+<div><dt>Goal</dt><dd>Dimensional accuracy to drawing</dd></div>
+<div><dt>Role</dt><dd>Machining &amp; process planning</dd></div>
+<div><dt>Obstacle</dt><dd>Sequencing, tooling &amp; tolerances</dd></div>
+<div><dt>Result</dt><dd>Finished piston to specification</dd></div>
+</dl>
+<a class="more" href="https://kaseyho.lovable.app/pneumatic-engine-piston">Read more</a>
+</article>
+
+<article class="proj">
+<header>
+<p class="meta">Software · Startup collaboration</p>
+<h3>One Pay Financial Software</h3>
+<p>Financial software developed and integrated into a startup’s platform to encourage positive financial behaviour.</p>
+</header>
+<dl class="tb">
+<div><dt>Goal</dt><dd>Long-term user retention</dd></div>
+<div><dt>Role</dt><dd>Development + product design</dd></div>
+<div><dt>Obstacle</dt><dd>Balancing tech, design, business</dd></div>
+<div><dt>Result</dt><dd>Integrated into live platform</dd></div>
+</dl>
+<a class="more" href="https://kaseyho.lovable.app/__l5e/assets-v1/c9fe8c41-6f96-4417-b823-0bfc163e2a44/One_Pay_Project.pdf">Read the project write-up</a>
+</article>
+
+<article class="proj">
+<header>
+<p class="meta">Infrastructure · Multidisciplinary team</p>
+<h3>High Park Path Design</h3>
+<p>A transportation solution improving mobility and accessibility within High Park, grounded in on-site assessment.</p>
+</header>
+<dl class="tb">
+<div><dt>Goal</dt><dd>Better mobility &amp; accessibility</dd></div>
+<div><dt>Role</dt><dd>Team lead</dd></div>
+<div><dt>Obstacle</dt><dd>Environmental &amp; stakeholder constraints</dd></div>
+<div><dt>Result</dt><dd>Feasible, requirements-driven design</dd></div>
+</dl>
+</article>
+</section>
+
+<section id="experience">
+<h2><em>(c)</em>Experience</h2>
+<p class="sub">Teams and roles that shaped how I work.</p>
+<div class="job">
+<div><h3>Chassis Team Member</h3><div class="org">University of Toronto Formula Racing</div></div>
+<p>Improved chassis component design by creating and iterating SolidWorks CAD models, balancing structural requirements, manufacturability, packaging constraints, and weight reduction. Supported vehicle integration by collaborating with suspension, powertrain, and other subteams to refine chassis geometry and ensure proper fitment between mechanical systems. Increased design reliability by assisting with fabrication, assembly, and validation of chassis components, identifying fitment issues and incorporating improvements into subsequent design iterations.</p>
+</div>
+<div class="job">
+<div><h3>Aquatic Leader</h3><div class="org">Aquatics program</div></div>
+<p>Supervised aquatic programs, supported and led staff, and maintained a safe, welcoming environment — building communication, leadership, organization, and decision-making skills in a fast-paced setting.</p>
+</div>
+<div class="job">
+<div><h3>Engineering Camp Assistant</h3><div class="org">STEM camp</div></div>
+<p>Helped deliver engaging STEM and engineering activities, explained technical concepts in approachable ways, and supported troubleshooting and creative problem-solving for students.</p>
+</div>
+</section>
+
+<section id="skills">
+<h2><em>(d)</em>Skills</h2>
+<p class="sub">Tools I reach for.</p>
+<div class="skills">
+<div><h3>Engineering analysis</h3><ul class="chips"><li>MATLAB</li><li>Excel</li><li>ANSYS</li><li>Stress/strain analysis</li><li>Data analysis</li><li>Process flow diagrams</li></ul></div>
+<div><h3>CAD</h3><ul class="chips"><li>SolidWorks</li><li>CATIA</li><li>Fusion 360</li><li>GD&amp;T</li></ul></div>
+<div><h3>Manufacturing &amp; prototyping</h3><ul class="chips"><li>3D printing</li><li>Laser cutting</li><li>Soldering</li><li>Hand/power tools</li><li>DFM</li></ul></div>
+<div><h3>Programming</h3><ul class="chips"><li>Java</li><li>Python</li><li>JavaScript</li></ul></div>
+</div>
+</section>
+</div>
+
+<section class="cta" id="contact">
+<div class="wrap">
+<h2>Let’s build something that matters.</h2>
+<div class="row">
+<a class="btn fill" href="mailto:kaseyho1106@gmail.com">kaseyho1106@gmail.com</a>
+<a href="https://www.linkedin.com/in/kaseyho11">LinkedIn</a>
+<a href="https://kaseyho.lovable.app/__l5e/assets-v1/d67c0b6d-9b3a-4520-8f79-bcd9b7c2f053/Kasey_Ho_Resume.pdf">Résumé</a>
+<a href="tel:2368835688">236-883-5688</a>
+</div>
+</div>
+</section>
+<div class="wrap"><footer>© 2026 Kasey Ho</footer></div>
+</body>
+</html>
